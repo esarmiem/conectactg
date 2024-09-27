@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Cartagena</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/5G9A2679.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .logo {
+            width: 25vw;
+            max-width: 250px;
+            height: auto;
+        }
+        .animated-text {
+            font-family: sans-serif;
+            font-size: 4vw;
+            margin-bottom: 10px;
+            color: #E4E2D5FF;
+        }
+        .animated-text .letter {
+            display: inline-block;
+            font-size: 4vw;
+            letter-spacing: -0.8vw;
+            animation: pressDown 2s forwards;
+            opacity: 0;
+        }
+        p {
+            font-family: sans-serif;
+            font-size: 2vw;
+            max-width: 80%;
+            color: #E4E2D5FF; 
+        }
+        @media (max-width: 768px) {
+            .logo {
+                width: 50vw;
+            }
+            .animated-text, .animated-text .letter {
+                font-size: 5vw;
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            p {
+                font-size: 4vw;
+            }
+        }
+        @keyframes pressDown {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .animated-text .letter:nth-child(1) { animation-delay: 0.1s; }
+        .animated-text .letter:nth-child(2) { animation-delay: 0.2s; }
+        .animated-text .letter:nth-child(3) { animation-delay: 0.3s; }
+        .animated-text .letter:nth-child(4) { animation-delay: 0.4s; }
+        .animated-text .letter:nth-child(5) { animation-delay: 0.5s; }
+        .animated-text .letter:nth-child(6) { animation-delay: 0.6s; }
+        .animated-text .letter:nth-child(7) { animation-delay: 0.7s; }
+        .animated-text .letter:nth-child(8) { animation-delay: 0.8s; }
+        .animated-text .letter:nth-child(9) { animation-delay: 0.9s; }
+        .animated-text .letter:nth-child(10) { animation-delay: 1s; }
+        .animated-text .letter:nth-child(11) { animation-delay: 1.1s; }
+        .animated-text .letter:nth-child(12) { animation-delay: 1.2s; }
+        .animated-text .letter:nth-child(13) { animation-delay: 1.3s; }
+        .animated-text .letter:nth-child(14) { animation-delay: 1.4s; }
+        .animated-text .letter:nth-child(15) { animation-delay: 1.5s; }
+        .animated-text .letter:nth-child(16) { animation-delay: 1.6s; }
+        .animated-text .letter:nth-child(17) { animation-delay: 1.7s; }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <img src="/logo.png" alt="logo" class="logo">
+        <h1 class="animated-text">
+            <span class="letter">C</span>
+            <span class="letter">o</span>
+            <span class="letter">n</span>
+            <span class="letter">e</span>
+            <span class="letter">c</span>
+            <span class="letter">t</span>
+            <span class="letter">a</span>
+            <span class="letter"> </span>
+            <span class="letter">C</span>
+            <span class="letter">a</span>
+            <span class="letter">r</span>
+            <span class="letter">t</span>
+            <span class="letter">a</span>
+            <span class="letter">g</span>
+            <span class="letter">e</span>
+            <span class="letter">n</span>
+            <span class="letter">a</span>
+        </h1>
+        <p>Estamos trabajando por el turismo de Cartagena</p>
+    </main>
+</body>
+</html>
