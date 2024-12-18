@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+---
+// Archivo: src/pages/index.astro
+---
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,213 +13,58 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('background.jpg'); /* Imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Imagen fija */
-            color: #fff; /* Color del texto blanco */
-            line-height: 1.6;
-            padding: 10px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .logo {
-            width: 100px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            color: #fff; /* Texto blanco */
-        }
-
-        .agenda .item {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .agenda .item:last-child {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        p {
-            font-size: 1rem;
-            color: #fff; /* Texto blanco */
-        }
-
-        p strong {
-                font-weight: bold;
-                font-size: 1.6rem;
-            }
-
-        footer {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        footer p {
-            font-size: 1rem;
-            color: #fff; /* Texto blanco */
-        }
-
-        footer .logos {
+            background: linear-gradient(to bottom, #645c9a, #f18622);
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            margin-top: 10px;
         }
 
-        footer .logos img {
-            margin: 0 10px;
-            border-radius: 10px;
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
         }
 
-        /* Clases personalizadas para las imágenes del footer */
-        .logofooter1 {
-            width: 40vw; /* Aumenta el ancho */
-            max-width: 300px; /* Máximo ancho de 300px */
-            height: auto;
-            border-radius: 10px;
+        .background-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('/background.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: transparent; /* Cambiado de white a transparent */
         }
 
-        .logofooter2 {
-            width: 20vw; /* Aumenta el ancho */
-            max-width: 150px; /* Máximo ancho de 150px */
-            height: auto;
-            border-radius: 10px;
+        @media screen and (orientation: portrait) {
+            .background-image {
+                background-size: contain;
+                max-width: 100%;
+                max-height: 100%;
+            }
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            p strong {
-                font-weight: bold;
-                font-size: 1.4rem;
-            }
-
-            .logo {
-                width: 180px;
-                height: 100px;
-            }
-
-            /* Ajustes para pantallas pequeñas */
-            .logofooter1 {
-                width: 60vw; /* Aumenta a 60% del ancho de la pantalla */
-                max-width: 240px;
-            }
-
-            .logofooter2 {
-                width: 30vw; /* Aumenta a 30% del ancho de la pantalla */
-                max-width: 120px;
+        @media screen and (orientation: landscape) {
+            .background-image {
+                background-size: contain;
+                max-width: 100%;
+                max-height: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="logonew.png" alt="Conecta Cartagena Logo" class="logo">
-            <h1>ORDEN DEL DÍA</h1>
-        </header>
-
-        <section class="agenda">
-            <div class="item">
-                <h2>8:00 A.M. a 8:45 A.M.</h2>
-                <p><strong>Registro y Bienvenida</strong></p>
-            </div>
-
-            <div class="item">
-                <h2>8:45 A.M. a 9:20 A.M.</h2>
-                <p><strong>Apertura Institucional</strong></p>
-                <p>Discurso de apertura por parte de representantes del proyecto Conecta Cartagena y autoridades.</p>
-            </div>
-
-            <div class="item">
-                <h2>9:20 A.M. a 9:40 A.M.</h2>
-                <p><strong>Turismo y Paz</strong></p>
-                <p>Presentación a cargo de <em>José Andrés Duarte</em>, Presidente Ejecutivo de Cotelco.</p>
-            </div>
-
-            <div class="item">
-                <h2>9:40 A.M. a 10:20 A.M.</h2>
-                <p><strong>Resumen Hackathon y Reconocimiento de Jurados</strong></p>
-            </div>
-
-            <div class="item">
-                <h2>10:20 A.M. a 11:00 A.M.</h2>
-                <p><strong>Cartagena y TripAdvisor: Tendencias y Herramientas para el destino</strong></p>
-                <p>A cargo de <em>Tatiana Paez</em>, Principal Client Partner de TripAdvisor.</p>
-            </div>
-
-            <div class="item">
-                <h2>11:00 A.M. a 11:15 A.M.</h2>
-                <p><strong>BREAK</strong></p>
-            </div>
-
-            <div class="item">
-                <h2>11:15 A.M. a 11:20 A.M.</h2>
-                <p><strong>Ruta Bazurto y Blas de Lezo: Mi Barrio Querido</strong></p>
-            </div>
-
-            <div class="item">
-                <h2>11:20 A.M. a 12:00 P.M.</h2>
-                <p><strong>Presentación del Proyecto Ganador</strong></p>
-            </div>
-
-            <div class="item">
-                <h2>12:10 P.M. a 12:30 P.M.</h2>
-                <p><strong>¿Qué viene para el Turismo en Cartagena?</strong></p>
-                <p>A cargo de <em>Ana Maria Viscasillas</em>, CDMA, DES, CED, Estratega Global para la Economía del Visitante.</p>
-            </div>
-
-            <div class="item">
-                <h2>12:30 P.M.</h2>
-                <p><strong>Clausura</strong></p>
-            </div>
-        </section>
-
-        <footer>
-            <div class="logos">
-                <img class="logofooter1" src="logo1.png" alt="Logo Cámara de Comercio Cartagena">
-                <p>Con el apoyo de:</p>
-                <img class="logofooter2" src="logo2.png" alt="Logo Gobernación de Bolívar">
-            </div>
-        </footer>
+    <div class="background-container">
+        <div class="background-image"></div>
     </div>
 </body>
 </html>
